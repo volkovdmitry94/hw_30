@@ -1,0 +1,17 @@
+.container{
+    max-width: 1400px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 400px;
+    margin: 20px;
+    padding-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
