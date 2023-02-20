@@ -15,17 +15,22 @@ class Car extends React.Component {
 }
 
 class Cars extends React.Component {
-    cars = [
-        {model: 'Civic', manufacturer: 'Honda', year: 2019, serialNumber: 123456},
-        {model: 'Accord', manufacturer: 'Honda', year: 2020, serialNumber: 190856},
-        {model: 'Corola', manufacturer: 'Toyota', year: 2017, serialNumber: 986734},
-        {model: 'Camry', manufacturer: 'Toyota', year: 2021, serialNumber: 689325},
-        {model: '370z', manufacturer: 'Nissan', year: 2017, serialNumber: 279867}
-    ]
+    constructor() {
+        super();
+        this.state = {
+            cars: [
+                {model: 'Civic', manufacturer: 'Honda', year: 2019, serialNumber: 123456},
+                {model: 'Accord', manufacturer: 'Honda', year: 2020, serialNumber: 190856},
+                {model: 'Corola', manufacturer: 'Toyota', year: 2017, serialNumber: 986734},
+                {model: 'Camry', manufacturer: 'Toyota', year: 2021, serialNumber: 689325},
+                {model: '370z', manufacturer: 'Nissan', year: 2017, serialNumber: 279867}
+            ]
+        };
+    }
     render() {
         return (
             <React.Fragment>
-                {this.cars.map((item, index) =>
+                {this.state.cars.map((item, index) =>
                     (<Car key={index} model={item.model} manufacturer={item.manufacturer}
                           year={item.year} serialNumber={item.serialNumber}/>))}
             </React.Fragment>
